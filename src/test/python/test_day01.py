@@ -3,36 +3,39 @@ import os.path
 
 from src.main.python.day01 import Solver
 
-day = os.path.basename(__file__)[8:10]
+ANSWER_PART_1_EXAMPLE = 11
+ANSWER_PART_2_EXAMPLE = 31
+ANSWER_PART_1 = 2756096
+ANSWER_PART_2 = 23117829
 
 
 def test_part_1_example():
-    data_file_path = os.path.join(os.environ.get('TEST_RESOURCES_DIR_PATH'),
-                                  f'day{day}-example.data')
     solver = Solver()
+    data_file_path = os.path.join(os.environ.get('TEST_RESOURCES_DIR_PATH'),
+                                  f'day{solver.get_day()}-example.data')
     answer = solver.part_1(data_file_path)
-    assert answer == 11
+    assert answer == ANSWER_PART_1_EXAMPLE
 
 
 def test_part_2_example():
-    data_file_path = os.path.join(os.environ.get('TEST_RESOURCES_DIR_PATH'),
-                                  f'day{day}-example.data')
     solver = Solver()
+    data_file_path = os.path.join(os.environ.get('TEST_RESOURCES_DIR_PATH'),
+                                  f'day{solver.get_day()}-example.data')
     answer = solver.part_2(data_file_path)
-    assert answer == 31
+    assert answer == ANSWER_PART_2_EXAMPLE
 
 
 def test_part_1():
-    data_file_path = os.path.join(os.environ.get('RESOURCES_DIR_PATH'),
-                                  f'day{day}.data')
     solver = Solver()
+    data_file_path = os.path.join(os.environ.get('RESOURCES_DIR_PATH'),
+                                  f'day{solver.get_day()}.data')
     answer = solver.part_1(data_file_path)
-    assert answer == 2756096
+    assert answer == ANSWER_PART_1
 
 
 def test_part_2():
-    data_file_path = os.path.join(os.environ.get('RESOURCES_DIR_PATH'),
-                                  f'day{day}.data')
     solver = Solver()
+    data_file_path = os.path.join(os.environ.get('RESOURCES_DIR_PATH'),
+                                  f'day{solver.get_day()}.data')
     answer = solver.part_2(data_file_path)
-    assert answer == 23117829
+    assert answer == ANSWER_PART_2

@@ -21,7 +21,7 @@ class Solver(AbstractSolver):
         super().__init__()
 
     def init_data(self, data_file_path: str = None) -> Any:
-        data = self.get_data(self.get_day(), data_file_path)
+        data = self.read_data_file(self.get_day(), data_file_path)
         pattern = r'(.*)'
         my_data = []
         for line in data:

@@ -10,6 +10,8 @@ from typing import Any
 
 from src.main.python.util import AbstractSolver
 
+DAY = '01'
+
 
 class Solver(AbstractSolver):
     def __init__(self) -> None:
@@ -28,18 +30,15 @@ class Solver(AbstractSolver):
 
     def solve_part_1(self, data: Any, **kwargs) -> int:
         list1, list2 = Solver.init_data(data)
-        total = 0
-        for i in range(len(list1)):
-            total += abs(list1[i] - list2[i])
-        return total
+        return sum([abs(val1 - val2) for val1, val2 in zip(list1, list2)])
 
     def solve_part_2(self, data: Any, **kwargs) -> int:
         list1, list2 = Solver.init_data(data)
         counter = Counter(list2)
-        total = 0
-        for i in range(len(list1)):
-            total += list1[i] * counter.get(list1[i], 0)
-        return total
+        return sum([val * counter.get(val, 0) for val in list1])
+
+    def get_day(self):
+        return DAY
 
 
 def main() -> None:
