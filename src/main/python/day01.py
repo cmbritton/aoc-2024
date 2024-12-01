@@ -9,6 +9,7 @@ from dataclasses import dataclass
 from typing import Any
 
 from src.main.python.util import AbstractSolver
+from collections import Counter
 
 
 @dataclass
@@ -38,7 +39,12 @@ class Solver(AbstractSolver):
         return total
 
     def solve_part_2(self, data: Any, **kwargs) -> int:
-        return 0
+        list1, list2 = self.init_data(data)
+        counter = Counter(list2)
+        total = 0
+        for i in range(len(list1)):
+            total += list1[i] * counter.get(list1[i], 0)
+        return total
 
 
 def main() -> None:

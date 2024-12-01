@@ -68,7 +68,7 @@ No answers here! Just elapsed times for each puzzle solution.
 
 | Puzzle                                                 | Part 1 Elapsed Time | Part 2 Elapsed Time |
 |--------------------------------------------------------|--------------------:|--------------------:|
-| [Day  1: Historian Hysteria](https://adventofcode.com/2024/1) |            1.86 milliseconds |            Unsolved |
+| [Day  1: Historian Hysteria](https://adventofcode.com/2024/1) |            1.86 milliseconds |            1.95 milliseconds |
 | [Day  2: Unavailable](https://adventofcode.com/2024/2) |            Unsolved |            Unsolved |
 | [Day  3: Unavailable](https://adventofcode.com/2024/3) |            Unsolved |            Unsolved |
 | [Day  4: Unavailable](https://adventofcode.com/2024/4) |            Unsolved |            Unsolved |
