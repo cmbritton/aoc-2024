@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Day 1: Historian Hysteria
+Day xx: Something
 
-https://adventofcode.com/2024/day/1
+https://adventofcode.com/2024/day/xx
 """
 import re
 from dataclasses import dataclass
@@ -20,22 +20,18 @@ class Solver(AbstractSolver):
     def __init__(self) -> None:
         super().__init__()
 
-    def init_data(self, data: list[str]) -> Any:
-        list1 = []
-        list2 = []
+    def init_data(self, data_file_path: str = None) -> Any:
+        data = self.get_data(self.get_day(), data_file_path)
+        pattern = r'(.*)'
+        my_data = []
         for line in data:
-            m = re.search(r'\s*(\S*)\s+(\S*)\s*', line)
-            list1.append(int(m.group(1)))
-            list2.append(int(m.group(2)))
+            m = re.search(pattern, line)
+            my_data.append(MyData(m.group(1)))
 
-        return sorted(list1), sorted(list2)
+        return my_data
 
     def solve_part_1(self, data: Any, **kwargs) -> int:
-        list1, list2 = self.init_data(data)
-        total = 0
-        for i in range(len(list1)):
-            total += abs(list1[i] - list2[i])
-        return total
+        return 0
 
     def solve_part_2(self, data: Any, **kwargs) -> int:
         return 0
