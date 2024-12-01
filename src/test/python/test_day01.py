@@ -3,13 +3,12 @@ import os.path
 
 from src.main.python.day01 import Solver
 
-
 day = os.path.basename(__file__)[8:10]
 
 
 def test_part_1_example():
     data_file_path = os.path.join(os.environ.get('TEST_RESOURCES_DIR_PATH'),
-                                  f'day{day}-part1-example.data')
+                                  f'day{day}-example.data')
     solver = Solver()
     answer = solver.part_1(data_file_path)
     assert answer == 11
@@ -17,7 +16,7 @@ def test_part_1_example():
 
 def test_part_2_example():
     data_file_path = os.path.join(os.environ.get('TEST_RESOURCES_DIR_PATH'),
-                                  f'day{day}-part2-example.data')
+                                  f'day{day}-example.data')
     solver = Solver()
     answer = solver.part_2(data_file_path)
     assert answer == 31
