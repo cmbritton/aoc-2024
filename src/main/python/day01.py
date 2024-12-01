@@ -31,10 +31,10 @@ class Solver(AbstractSolver):
 
         return my_data
 
-    def solve_part_1(self, data: Any) -> int:
+    def solve_part_1(self, data: Any, **kwargs) -> int:
         return 0
 
-    def solve_part_2(self, data: Any) -> int:
+    def solve_part_2(self, data: Any, **kwargs) -> int:
         return 0
 
     def get_day(self) -> str:
