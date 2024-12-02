@@ -18,20 +18,18 @@ class Solver(AbstractSolver):
 
     @staticmethod
     def _init_data(data: list[str]) -> Any:
-        reports = []
-        for line in data:
-            reports.append([int(x) for x in line.split(' ')])
-        return reports
+        return [[int(x) for x in line.split(' ')] for line in data]
 
     @staticmethod
     def _is_report_safe(report: list[int]) -> bool:
-        ascending = False
-        descending = False
+        ascending = descending = False
         for a, b in pairwise(report):
             if not 1 <= abs(a - b) <= 3:
                 return False
-            ascending |= a < b
-            descending |= a > b
+            if a < b:
+                ascending = True
+            elif a > b:
+                descending = True
             if ascending and descending:
                 return False
 
@@ -39,30 +37,17 @@ class Solver(AbstractSolver):
 
     @staticmethod
     def _is_dampened_report_safe(report: list[int]) -> bool:
-        for i in range(len(report)):
-            dampened_report = report[:i] + report[i + 1:]
-            if Solver._is_report_safe(dampened_report):
-                return True
-
-        return False
+        return any(Solver._is_report_safe(report[:i] + report[i + 1:]) for i in
+                   range(len(report)))
 
     def solve_part_1(self, data: Any, **kwargs) -> int:
         reports = Solver._init_data(data)
-        total = 0
-        for report in reports:
-            if Solver._is_report_safe(report):
-                total += 1
-        return total
+        return sum(1 for report in reports if Solver._is_report_safe(report))
 
     def solve_part_2(self, data: Any, **kwargs) -> int:
         reports = Solver._init_data(data)
-        total = 0
-        for report in reports:
-            if (Solver._is_report_safe(report)
-                    or Solver._is_dampened_report_safe(report)):
-                total += 1
-
-        return total
+        return sum(1 for report in reports if Solver._is_report_safe(
+                report) or Solver._is_dampened_report_safe(report))
 
     def get_day(self):
         return DAY
