@@ -3,9 +3,9 @@ import os.path
 
 from src.main.python.day02 import Solver
 
-ANSWER_PART_1_EXAMPLE = -1
+ANSWER_PART_1_EXAMPLE = 2
 ANSWER_PART_2_EXAMPLE = -1
-ANSWER_PART_1 = -1
+ANSWER_PART_1 = 479
 ANSWER_PART_2 = -1
 
 
