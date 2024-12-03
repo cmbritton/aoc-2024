@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Day 2: TBD
+Day 2: Mull It Over
 
 https://adventofcode.com/2024/day/3
 """
+import re
 from typing import Any
 
 from src.main.python.util import AbstractSolver
@@ -20,7 +21,12 @@ class Solver(AbstractSolver):
         return [[int(x) for x in line.split(' ')] for line in data]
 
     def solve_part_1(self, data: Any, **kwargs) -> int:
-        return 0
+        total = 0
+        for line in data:
+            m = re.findall(r'mul\((\d{1,3}),(\d{1,3})\)', line)
+            for x in m:
+                total += int(x[0]) * int(x[1])
+        return total
 
     def solve_part_2(self, data: Any, **kwargs) -> int:
         return 0
