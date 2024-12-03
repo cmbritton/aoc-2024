@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Day 2: Mull It Over
+Day 3: Mull It Over
 
 https://adventofcode.com/2024/day/3
 """
