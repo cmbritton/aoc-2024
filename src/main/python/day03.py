@@ -29,7 +29,20 @@ class Solver(AbstractSolver):
         return total
 
     def solve_part_2(self, data: Any, **kwargs) -> int:
-        return 0
+        total = 0
+        enabled = True
+        for line in data:
+            m = re.findall(r"(mul)\((\d{1,3}),(\d{1,3})\)|(do\(\))|(don't\(\))", line)
+            for x in m:
+                if x[3] == 'do()':
+                    enabled = True
+                elif x[4] == "don't()":
+                    enabled = False
+                elif enabled:
+                    total += int(x[1]) * int(x[2])
+        return total
+
+    # 70553436 is wrong
 
     def get_day(self):
         return DAY
