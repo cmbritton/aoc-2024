@@ -22,12 +22,20 @@ class Solver(AbstractSolver):
         total = 0
         for line in data:
             m = re.findall(PATTERN, line)
-            total += sum(int(x[1]) * int(x[2]) for x in m if x[0] == 'mul')
-            # for x in m:
-            #     if x[0] == 'mul':
-            #         total += int(x[1]) * int(x[2])
+            for x in m:
+                if x[0] == 'mul':
+                    total += int(x[1]) * int(x[2])
 
         return total
+
+    @staticmethod
+    def _is_enabled(enabled: bool, x: tuple[str, str, str, str, str]) -> bool:
+        if x[3] == 'do()':
+            return True
+        elif x[4] == "don't()":
+            return False
+        else:
+            return enabled
 
     def solve_part_2(self, data: Any, **kwargs) -> int:
         total = 0
@@ -35,16 +43,11 @@ class Solver(AbstractSolver):
         for line in data:
             m = re.findall(PATTERN, line)
             for x in m:
-                if x[3] == 'do()':
-                    enabled = True
-                elif x[4] == "don't()":
-                    enabled = False
-                elif enabled:
+                enabled = Solver._is_enabled(enabled, x)
+                if enabled and x[0] == 'mul':
                     total += int(x[1]) * int(x[2])
 
         return total
-
-    # 70553436 is wrong
 
     def get_day(self):
         return DAY
