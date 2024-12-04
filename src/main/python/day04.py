@@ -147,6 +147,17 @@ class Solver(AbstractSolver):
             count += len(re.findall(PATTERN, row))
         return count
 
+    @staticmethod
+    def is_x_mas(data, row, col) -> bool:
+        ra = row - 1  # row above
+        rb = row + 1  # row below
+        cl = col - 1  # column left
+        cr = col + 1  # column right
+        return (((data[ra][cl] == 'M' and data[rb][cr] == 'S') or
+                 (data[ra][cl] == 'S' and data[rb][cr] == 'M')) and
+                ((data[rb][cl] == 'M' and data[ra][cr] == 'S') or
+                 (data[rb][cl] == 'S' and data[ra][cr] == 'M')))
+
     def solve_part_1(self, data: Any, **kwargs) -> int:
         reversed_data = Solver.reverse_data(data)
         top_to_bottom_data = Solver.diagonals_top_to_bottom(data)
@@ -170,11 +181,8 @@ class Solver(AbstractSolver):
         for row in range(1, len(data) - 1):
             for col in range(1, len(data) - 1):
                 if data[row][col] == 'A':
-                    if (data[row - 1][col - 1] == 'M' and data[row + 1][col + 1] == 'S') or \
-                            (data[row - 1][col - 1] == 'S' and data[row + 1][col + 1] == 'M'):
-                        if (data[row + 1][col - 1] == 'M' and data[row - 1][col + 1] == 'S') or \
-                                (data[row + 1][col - 1] == 'S' and data[row - 1][col + 1] == 'M'):
-                            total += 1
+                    if Solver.is_x_mas(data, row, col):
+                        total += 1
 
         return total
 
