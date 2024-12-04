@@ -156,15 +156,6 @@ class Solver(AbstractSolver):
         ur_to_ll_data = Solver.diagonals_ur_to_ll(data)
         lr_to_ul_data = Solver.diagonals_lr_to_ul(data)
 
-        print(f'data={Solver.count_data_matches(data)}')
-        print(f'reversed_data={Solver.count_data_matches(reversed_data)}')
-        print(f'reversed_data={Solver.count_data_matches(top_to_bottom_data)}')
-        print(f'reversed_data={Solver.count_data_matches(bottom_to_top_data)}')
-        print(f'ul_to_lr_data={Solver.count_data_matches(ul_to_lr_data)}')
-        print(f'll_to_ur_data={Solver.count_data_matches(ll_to_ur_data)}')
-        print(f'ur_to_ll_data={Solver.count_data_matches(ur_to_ll_data)}')
-        print(f'lr_to_ul_data={Solver.count_data_matches(lr_to_ul_data)}')
-
         return self.count_data_matches(data) + \
             self.count_data_matches(reversed_data) + \
             self.count_data_matches(top_to_bottom_data) + \
@@ -175,7 +166,17 @@ class Solver(AbstractSolver):
             self.count_data_matches(lr_to_ul_data)
 
     def solve_part_2(self, data: Any, **kwargs) -> int:
-        return 0
+        total = 0
+        for row in range(1, len(data) - 1):
+            for col in range(1, len(data) - 1):
+                if data[row][col] == 'A':
+                    if (data[row - 1][col - 1] == 'M' and data[row + 1][col + 1] == 'S') or \
+                            (data[row - 1][col - 1] == 'S' and data[row + 1][col + 1] == 'M'):
+                        if (data[row + 1][col - 1] == 'M' and data[row - 1][col + 1] == 'S') or \
+                                (data[row + 1][col - 1] == 'S' and data[row - 1][col + 1] == 'M'):
+                            total += 1
+
+        return total
 
     def get_day(self):
         return DAY
