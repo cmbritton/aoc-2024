@@ -5,7 +5,7 @@ from src.main.python.day04 import Solver
 
 ANSWER_PART_1_EXAMPLE = 18
 ANSWER_PART_2_EXAMPLE = -1
-ANSWER_PART_1 = -1
+ANSWER_PART_1 = 2397
 ANSWER_PART_2 = -1
 
 

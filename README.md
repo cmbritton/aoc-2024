@@ -71,7 +71,7 @@ No answers here! Just elapsed times for each puzzle solution.
 | [Day  1: Historian Hysteria](https://adventofcode.com/2024/1) |   1.86 milliseconds |   4.18 milliseconds |
 | [Day  2: Red-Nosed Reports](https://adventofcode.com/2024/2)  |   2.10 milliseconds |   4.40 milliseconds |
 | [Day  3: Mull It Over](https://adventofcode.com/2024/3)       |   2.03 milliseconds | 858.20 microseconds |
-| [Day  4: Unavailable](https://adventofcode.com/2024/4)        |            Unsolved |            Unsolved |
+| [Day  4: Ceres Search](https://adventofcode.com/2024/4)        |  18.74 milliseconds |            Unsolved |
 | [Day  5: Unavailable](https://adventofcode.com/2024/5)        |            Unsolved |            Unsolved |
 | [Day  6: Unavailable](https://adventofcode.com/2024/6)        |            Unsolved |            Unsolved |
 | [Day  7: Unavailable](https://adventofcode.com/2024/7)        |            Unsolved |            Unsolved |
