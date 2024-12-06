@@ -4,7 +4,7 @@ import os.path
 from src.main.python.day05 import Solver
 
 ANSWER_PART_1_EXAMPLE = 143
-ANSWER_PART_2_EXAMPLE = -1
+ANSWER_PART_2_EXAMPLE = 123
 ANSWER_PART_1 = 6498
 ANSWER_PART_2 = -1
 
