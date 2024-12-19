@@ -159,7 +159,6 @@ class Solver(AbstractSolver):
         self.init_data(data)
         total = x = 0
         while x <= self.lab.max_idx:
-            print(f'row: {x}')
             y = 0
             while y <= self.lab.max_idx:
                 if self.lab.floor[x][y] == '.':
