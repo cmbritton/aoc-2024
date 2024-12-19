@@ -43,7 +43,10 @@ class Solver(AbstractSolver):
 
 def main() -> None:
     solver = Solver()
-    solver.run()
+    solver.run_part_1()
+
+    solver = Solver()
+    solver.run_part_2()
 
 
 if __name__ == "__main__":

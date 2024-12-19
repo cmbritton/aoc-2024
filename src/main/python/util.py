@@ -85,13 +85,6 @@ class AbstractSolver(ABC):
 
         return answer
 
-    def run(self) -> None:
-        day = self.get_day()
-        data_file_path = os.path.join(os.environ.get('RESOURCES_DIR_PATH'),
-                                      f'day{day}.data')
-        self.part_1(data_file_path)
-        self.part_2(data_file_path)
-
     def run_part_1(self) -> None:
         day = self.get_day()
         data_file_path = os.path.join(os.environ.get('RESOURCES_DIR_PATH'),
