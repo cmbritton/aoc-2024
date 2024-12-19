@@ -92,6 +92,18 @@ class AbstractSolver(ABC):
         self.part_1(data_file_path)
         self.part_2(data_file_path)
 
+    def run_part_1(self) -> None:
+        day = self.get_day()
+        data_file_path = os.path.join(os.environ.get('RESOURCES_DIR_PATH'),
+                                      f'day{day}.data')
+        self.part_1(data_file_path)
+
+    def run_part_2(self) -> None:
+        day = self.get_day()
+        data_file_path = os.path.join(os.environ.get('RESOURCES_DIR_PATH'),
+                                      f'day{day}.data')
+        self.part_2(data_file_path)
+
     @staticmethod
     def print_info(part: str, timer: Timer, answer: int) -> None:
         print(f'{part}\n'
