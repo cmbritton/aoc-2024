@@ -4,9 +4,9 @@ import os.path
 from src.main.python.day06 import Solver
 
 ANSWER_PART_1_EXAMPLE = 41
-ANSWER_PART_2_EXAMPLE = -1
+ANSWER_PART_2_EXAMPLE = 6
 ANSWER_PART_1 = 5086
-ANSWER_PART_2 = -1
+ANSWER_PART_2 = 1770
 
 
 def test_part_1_example():
