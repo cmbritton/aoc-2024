@@ -72,7 +72,7 @@ No answers here! Just elapsed times for each puzzle solution.
 | [Day  2: Red-Nosed Reports](https://adventofcode.com/2024/2)  |   2.10 milliseconds |   4.40 milliseconds |
 | [Day  3: Mull It Over](https://adventofcode.com/2024/3)       |   2.03 milliseconds | 858.20 microseconds |
 | [Day  4: Ceres Search](https://adventofcode.com/2024/4)       |  18.74 milliseconds |   1.98 milliseconds |
-| [Day  5: Print Queue](https://adventofcode.com/2024/5)        |  41.91 milliseconds |            Unsolved |
+| [Day  5: Print Queue](https://adventofcode.com/2024/5)        | 106.13 milliseconds | 104.39 milliseconds |
 | [Day  6: Unavailable](https://adventofcode.com/2024/6)        |            Unsolved |            Unsolved |
 | [Day  7: Unavailable](https://adventofcode.com/2024/7)        |            Unsolved |            Unsolved |
 | [Day  8: Unavailable](https://adventofcode.com/2024/8)        |            Unsolved |            Unsolved |
