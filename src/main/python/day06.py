@@ -111,7 +111,6 @@ class Guard(object):
         if self._is_out_of_lab(next_step):
             return False
         if self.lab.floor[next_step.x][next_step.y] == '#':
-            print(f'Obstacle at {next_step}')
             return True
         return False
 
