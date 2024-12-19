@@ -114,7 +114,7 @@ class Guard(object):
             return True
         return False
 
-# 5085 is too low
+
 class Solver(AbstractSolver):
 
     def __init__(self) -> None:
