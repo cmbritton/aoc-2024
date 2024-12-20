@@ -75,7 +75,7 @@ No answers here! Just elapsed times for each puzzle solution.
 | [Day  5: Print Queue](https://adventofcode.com/2024/5)           | 106.13 milliseconds | 104.39 milliseconds |
 | [Day  6: Guard Gallivant](https://adventofcode.com/2024/6)       |  17.37 milliseconds |      224.51 seconds |
 | [Day  7: Bridge Repair](https://adventofcode.com/2024/7)         | 167.95 milliseconds |       10.12 seconds |
-| [Day  8: Resonant Collinearity](https://adventofcode.com/2024/8) |   2.69 milliseconds |            Unsolved |
+| [Day  8: Resonant Collinearity](https://adventofcode.com/2024/8) |   2.69 milliseconds |   5.59 milliseconds |
 | [Day  9: Unavailable](https://adventofcode.com/2024/9)           |            Unsolved |            Unsolved |
 | [Day 10: Unavailable](https://adventofcode.com/2024/10)          |            Unsolved |            Unsolved |
 | [Day 11: Unavailable](https://adventofcode.com/2024/11)          |            Unsolved |            Unsolved |

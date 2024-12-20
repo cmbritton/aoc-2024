@@ -33,7 +33,34 @@ class Solver(AbstractSolver):
                     pos = Pos(x=x, y=y)
                     self.antennas[grid[x][y]].append(Ant(pos, freq=grid[x][y]))
 
-    def find_antinodes_for_nodes(self, a1: Ant, a2: Ant) -> None:
+    def find_collinear_antinodes_for_nodes(self, a1: Ant, a2: Ant) -> None:
+        dist = Pos(x=a2.pos.x - a1.pos.x, y=a2.pos.y - a1.pos.y)
+
+        p1 = Pos(x=a1.pos.x + dist.x, y=a1.pos.y + dist.y)
+        while p1.x >= 0 and p1.x < self.size and p1.y >= 0 and p1.y < self.size:
+            # if p1 not in [a1.pos, a2.pos]:
+            self.antinodes[a1.freq].add(p1)
+            p1 = Pos(x=p1.x + dist.x, y=p1.y + dist.y)
+
+        p1 = Pos(x=a1.pos.x - dist.x, y=a1.pos.y - dist.y)
+        while p1.x >= 0 and p1.x < self.size and p1.y >= 0 and p1.y < self.size:
+            # if p1 not in [a1.pos, a2.pos]:
+            self.antinodes[a1.freq].add(p1)
+            p1 = Pos(x=p1.x - dist.x, y=p1.y - dist.y)
+
+        p1 = Pos(x=a2.pos.x + dist.x, y=a2.pos.y + dist.y)
+        while p1.x >= 0 and p1.x < self.size and p1.y >= 0 and p1.y < self.size:
+            # if p1 not in [a1.pos, a2.pos]:
+            self.antinodes[a1.freq].add(p1)
+            p1 = Pos(x=p1.x + dist.x, y=p1.y + dist.y)
+
+        p1 = Pos(x=a2.pos.x - dist.x, y=a2.pos.y - dist.y)
+        while p1.x >= 0 and p1.x < self.size and p1.y >= 0 and p1.y < self.size:
+            # if p1 not in [a1.pos, a2.pos]:
+            self.antinodes[a1.freq].add(p1)
+            p1 = Pos(x=p1.x - dist.x, y=p1.y - dist.y)
+
+    def find_resonate_antinodes_for_nodes(self, a1: Ant, a2: Ant) -> None:
         dist = Pos(x=a2.pos.x - a1.pos.x, y=a2.pos.y - a1.pos.y)
 
         p1 = Pos(x=a1.pos.x + dist.x, y=a1.pos.y + dist.y)
@@ -56,10 +83,13 @@ class Solver(AbstractSolver):
             if p1 not in [a1.pos, a2.pos]:
                 self.antinodes[a1.freq].add(p1)
 
-
-    def find_antinodes(self, freq: str, ants: list[Ant]) -> None:
+    def find_collinear_antinodes(self, freq: str, ants: list[Ant]) -> None:
         for a1, a2 in permutations(ants, 2):
-            self.find_antinodes_for_nodes(a1, a2)
+            self.find_collinear_antinodes_for_nodes(a1, a2)
+
+    def find_resonate_antinodes(self, freq: str, ants: list[Ant]) -> None:
+        for a1, a2 in permutations(ants, 2):
+            self.find_resonate_antinodes_for_nodes(a1, a2)
 
     def print_antinodes(self) -> None:
         print()
@@ -75,7 +105,7 @@ class Solver(AbstractSolver):
     def solve_part_1(self, data: Any, **kwargs) -> int:
         self.init_data(data)
         for freq in self.antennas:
-            self.find_antinodes(freq, self.antennas[freq])
+            self.find_resonate_antinodes(freq, self.antennas[freq])
 
         # self.print_antinodes()
         locs = set()
@@ -84,7 +114,15 @@ class Solver(AbstractSolver):
         return len(locs)
 
     def solve_part_2(self, data: Any, **kwargs) -> int:
-        return 0
+        self.init_data(data)
+        for freq in self.antennas:
+            self.find_collinear_antinodes(freq, self.antennas[freq])
+
+        # self.print_antinodes()
+        locs = set()
+        for freq in self.antinodes:
+            locs.update(self.antinodes[freq])
+        return len(locs)
 
     def get_day(self):
         return DAY
