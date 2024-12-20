@@ -66,30 +66,30 @@ feature that I was not familiar with enough to use in my initial solution.
 
 No answers here! Just elapsed times for each puzzle solution.
 
-| Puzzle                                                        | Part 1 Elapsed Time | Part 2 Elapsed Time |
-|---------------------------------------------------------------|--------------------:|--------------------:|
-| [Day  1: Historian Hysteria](https://adventofcode.com/2024/1) |   1.86 milliseconds |   4.18 milliseconds |
-| [Day  2: Red-Nosed Reports](https://adventofcode.com/2024/2)  |   2.10 milliseconds |   4.40 milliseconds |
-| [Day  3: Mull It Over](https://adventofcode.com/2024/3)       |   2.03 milliseconds | 858.20 microseconds |
-| [Day  4: Ceres Search](https://adventofcode.com/2024/4)       |  18.74 milliseconds |   1.98 milliseconds |
-| [Day  5: Print Queue](https://adventofcode.com/2024/5)        | 106.13 milliseconds | 104.39 milliseconds |
-| [Day  6: Guard Gallivant](https://adventofcode.com/2024/6)    |  17.37 milliseconds |      224.51 seconds |
-| [Day  7: Bridge Repair](https://adventofcode.com/2024/7)      | 167.95 milliseconds |       10.12 seconds |
-| [Day  8: Unavailable](https://adventofcode.com/2024/8)        |            Unsolved |            Unsolved |
-| [Day  9: Unavailable](https://adventofcode.com/2024/9)        |            Unsolved |            Unsolved |
-| [Day 10: Unavailable](https://adventofcode.com/2024/10)       |            Unsolved |            Unsolved |
-| [Day 11: Unavailable](https://adventofcode.com/2024/11)       |            Unsolved |            Unsolved |
-| [Day 12: Unavailable](https://adventofcode.com/2024/12)       |            Unsolved |            Unsolved |
-| [Day 13: Unavailable](https://adventofcode.com/2024/13)       |            Unsolved |            Unsolved |
-| [Day 14: Unavailable](https://adventofcode.com/2024/14)       |            Unsolved |            Unsolved |
-| [Day 15: Unavailable](https://adventofcode.com/2024/15)       |            Unsolved |            Unsolved |
-| [Day 16: Unavailable](https://adventofcode.com/2024/16)       |            Unsolved |            Unsolved |
-| [Day 17: Unavailable](https://adventofcode.com/2024/17)       |            Unsolved |            Unsolved |
-| [Day 18: Unavailable](https://adventofcode.com/2024/18)       |            Unsolved |            Unsolved |
-| [Day 19: Unavailable](https://adventofcode.com/2024/19)       |            Unsolved |            Unsolved |
-| [Day 20: Unavailable](https://adventofcode.com/2024/20)       |            Unsolved |            Unsolved |
-| [Day 21: Unavailable](https://adventofcode.com/2024/21)       |            Unsolved |            Unsolved |
-| [Day 22: Unavailable](https://adventofcode.com/2024/22)       |            Unsolved |            Unsolved |
-| [Day 23: Unavailable](https://adventofcode.com/2024/23)       |            Unsolved |            Unsolved |
-| [Day 24: Unavailable](https://adventofcode.com/2024/24)       |            Unsolved |            Unsolved |
-| [Day 25: Unavailable](https://adventofcode.com/2024/25)       |            Unsolved |            Unsolved |
+| Puzzle                                                           | Part 1 Elapsed Time | Part 2 Elapsed Time |
+|------------------------------------------------------------------|--------------------:|--------------------:|
+| [Day  1: Historian Hysteria](https://adventofcode.com/2024/1)    |   1.86 milliseconds |   4.18 milliseconds |
+| [Day  2: Red-Nosed Reports](https://adventofcode.com/2024/2)     |   2.10 milliseconds |   4.40 milliseconds |
+| [Day  3: Mull It Over](https://adventofcode.com/2024/3)          |   2.03 milliseconds | 858.20 microseconds |
+| [Day  4: Ceres Search](https://adventofcode.com/2024/4)          |  18.74 milliseconds |   1.98 milliseconds |
+| [Day  5: Print Queue](https://adventofcode.com/2024/5)           | 106.13 milliseconds | 104.39 milliseconds |
+| [Day  6: Guard Gallivant](https://adventofcode.com/2024/6)       |  17.37 milliseconds |      224.51 seconds |
+| [Day  7: Bridge Repair](https://adventofcode.com/2024/7)         | 167.95 milliseconds |       10.12 seconds |
+| [Day  8: Resonant Collinearity](https://adventofcode.com/2024/8) |   2.69 milliseconds |            Unsolved |
+| [Day  9: Unavailable](https://adventofcode.com/2024/9)           |            Unsolved |            Unsolved |
+| [Day 10: Unavailable](https://adventofcode.com/2024/10)          |            Unsolved |            Unsolved |
+| [Day 11: Unavailable](https://adventofcode.com/2024/11)          |            Unsolved |            Unsolved |
+| [Day 12: Unavailable](https://adventofcode.com/2024/12)          |            Unsolved |            Unsolved |
+| [Day 13: Unavailable](https://adventofcode.com/2024/13)          |            Unsolved |            Unsolved |
+| [Day 14: Unavailable](https://adventofcode.com/2024/14)          |            Unsolved |            Unsolved |
+| [Day 15: Unavailable](https://adventofcode.com/2024/15)          |            Unsolved |            Unsolved |
+| [Day 16: Unavailable](https://adventofcode.com/2024/16)          |            Unsolved |            Unsolved |
+| [Day 17: Unavailable](https://adventofcode.com/2024/17)          |            Unsolved |            Unsolved |
+| [Day 18: Unavailable](https://adventofcode.com/2024/18)          |            Unsolved |            Unsolved |
+| [Day 19: Unavailable](https://adventofcode.com/2024/19)          |            Unsolved |            Unsolved |
+| [Day 20: Unavailable](https://adventofcode.com/2024/20)          |            Unsolved |            Unsolved |
+| [Day 21: Unavailable](https://adventofcode.com/2024/21)          |            Unsolved |            Unsolved |
+| [Day 22: Unavailable](https://adventofcode.com/2024/22)          |            Unsolved |            Unsolved |
+| [Day 23: Unavailable](https://adventofcode.com/2024/23)          |            Unsolved |            Unsolved |
+| [Day 24: Unavailable](https://adventofcode.com/2024/24)          |            Unsolved |            Unsolved |
+| [Day 25: Unavailable](https://adventofcode.com/2024/25)          |            Unsolved |            Unsolved |
