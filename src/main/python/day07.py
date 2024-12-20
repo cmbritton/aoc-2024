@@ -23,13 +23,15 @@ class Solver(AbstractSolver):
         for idx, term in enumerate(terms[1:]):
             if ops[idx] == '+':
                 result += term
-            else:
+            elif ops[idx] == '*':
                 result *= term
+            else:
+                result = int(str(result) + str(term))
         return result
 
-    def solve(self, line: str) -> int:
+    def solve(self, line: str, operators: list[str]) -> int:
         vals = [int(x) for x in line.replace(':', '').split(' ')]
-        for ops in product(['+', '*'], repeat=len(vals[1:]) - 1):
+        for ops in product(operators, repeat=len(vals[1:]) - 1):
             if self.calc(vals[1:], ops) == vals[0]:
                 return vals[0]
         return 0
@@ -37,11 +39,14 @@ class Solver(AbstractSolver):
     def solve_part_1(self, data: Any, **kwargs) -> int:
         total = 0
         for line in data:
-            total += self.solve(line)
+            total += self.solve(line, ['+', '*'])
         return total
 
     def solve_part_2(self, data: Any, **kwargs) -> int:
-        pass
+        total = 0
+        for line in data:
+            total += self.solve(line, ['+', '*', '||'])
+        return total
 
     def get_day(self):
         return DAY
