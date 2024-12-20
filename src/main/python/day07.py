@@ -4,11 +4,12 @@ Day 6: Bridge Repair
 
 https://adventofcode.com/2024/day/7
 """
+from itertools import product
 from typing import Any
 
 from src.main.python.util import AbstractSolver
 
-DAY = '06'
+DAY = '07'
 
 
 class Solver(AbstractSolver):
@@ -16,11 +17,28 @@ class Solver(AbstractSolver):
     def __init__(self) -> None:
         super().__init__()
 
-    def init_data(self, data: list[str]) -> None:
-        pass
+    @staticmethod
+    def calc(terms: list[int], ops: tuple[str, ...]) -> int:
+        result = terms[0]
+        for idx, term in enumerate(terms[1:]):
+            if ops[idx] == '+':
+                result += term
+            else:
+                result *= term
+        return result
+
+    def solve(self, line: str) -> int:
+        vals = [int(x) for x in line.replace(':', '').split(' ')]
+        for ops in product(['+', '*'], repeat=len(vals[1:]) - 1):
+            if self.calc(vals[1:], ops) == vals[0]:
+                return vals[0]
+        return 0
 
     def solve_part_1(self, data: Any, **kwargs) -> int:
-        pass
+        total = 0
+        for line in data:
+            total += self.solve(line)
+        return total
 
     def solve_part_2(self, data: Any, **kwargs) -> int:
         pass

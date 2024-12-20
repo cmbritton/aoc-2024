@@ -74,7 +74,7 @@ No answers here! Just elapsed times for each puzzle solution.
 | [Day  4: Ceres Search](https://adventofcode.com/2024/4)       |  18.74 milliseconds |   1.98 milliseconds |
 | [Day  5: Print Queue](https://adventofcode.com/2024/5)        | 106.13 milliseconds | 104.39 milliseconds |
 | [Day  6: Guard Gallivant](https://adventofcode.com/2024/6)    |  17.37 milliseconds |      224.51 seconds |
-| [Day  7: Bridge Repair](https://adventofcode.com/2024/7)        |            Unsolved |            Unsolved |
+| [Day  7: Bridge Repair](https://adventofcode.com/2024/7)      | 159.46 milliseconds |            Unsolved |
 | [Day  8: Unavailable](https://adventofcode.com/2024/8)        |            Unsolved |            Unsolved |
 | [Day  9: Unavailable](https://adventofcode.com/2024/9)        |            Unsolved |            Unsolved |
 | [Day 10: Unavailable](https://adventofcode.com/2024/10)       |            Unsolved |            Unsolved |
